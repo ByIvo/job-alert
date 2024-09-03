@@ -1,0 +1,12 @@
+name: Curl Every 5 Minutes
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+
+jobs:
+  curl_and_output:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Curl and Output HTML
+        run: echo "Ran!"
