@@ -17,7 +17,7 @@ module.exports = (function() {
     const fullBody = getFullBody(jobs);
     
     const mailOptions = {
-        from: process.env.SMTP_FROM,
+        from: '',//process.env.SMTP_FROM,
         to: process.env.SMTP_TO,
         subject: 'New jobs found',
         html: fullBody
@@ -26,8 +26,9 @@ module.exports = (function() {
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error(error);
+            process.exit(1);
         } else {
-            console.info('Email enviado com sucess');   
+            console.info('Email enviado com sucess');
         }
     });
     };
