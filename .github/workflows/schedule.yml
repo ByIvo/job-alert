@@ -1,4 +1,4 @@
-name: Curl Every 5 Minutes
+name: Schedule job search
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  curl_and_output:
+  search for jobs and notify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
