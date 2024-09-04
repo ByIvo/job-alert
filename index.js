@@ -1,7 +1,8 @@
 const JobFinder = require('./src/job-finder');
-
+const JobAlert = require('./src/job-alert');
 
 (async function() {
     const response = await JobFinder.findJobs();
-    console.log(response);
+
+    JobAlert.alertJobsFound(response.jobs);
 })();

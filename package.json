@@ -14,5 +14,8 @@
     "axios": "^1.7.7",
     "jest": "^29.7.0",
     "sinon": "^18.0.0"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.15"
   }
 }

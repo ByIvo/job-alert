@@ -8,13 +8,15 @@ module.exports = (function() {
         .filter(javaJobs)
         .map(expectedJobStructure);
         
+        console.info(mappedJobs.length + ' jobs found!');
+
         return {
             jobs: mappedJobs
         }
     };
 
     function javaJobs(job) {
-        const matches = job.name.matchAll(/\bjava\b/gi);
+        const matches = job.name.matchAll(/\bmobile\b/gi);
         const hasFoundAnything = !matches.next().done;
         return hasFoundAnything;
     }
