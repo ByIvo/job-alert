@@ -1,4 +1,4 @@
-name: Schedule job search
+name: Search and alert for jobs
 
 on:
   schedule:
