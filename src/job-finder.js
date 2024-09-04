@@ -2,7 +2,7 @@ module.exports = (function() {
     const axios = require('axios');
 
     const findJobs = async function() {
-        const response = await axios.get('anyurl');
+        const response = await axios.get('https://jobs-api.x-team.com/jobs?populate[]=image&populate[]=isAlwaysHiring&populate[]=jobLocation&populate=skills&open=true&_sort=updated_at:DESC,priority:DESC');
 
         const mappedJobs = response.data
         .filter(javaJobs)

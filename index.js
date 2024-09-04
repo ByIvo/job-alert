@@ -1,4 +1,7 @@
 const JobFinder = require('./src/job-finder');
 
 
-JobFinder.do();
+(async function() {
+    const response = await JobFinder.findJobs();
+    console.log(response);
+})();
