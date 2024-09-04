@@ -8,5 +8,8 @@ jobs:
   curl_and_output:
     runs-on: ubuntu-latest
     steps:
-      - name: Run Curl and Output HTML
-        run: echo "Ran!"
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Run Node.js application
+        run: npm start
