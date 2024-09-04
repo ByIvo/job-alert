@@ -2,7 +2,8 @@ name: Curl Every 5 Minutes
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 6,9,12,15 * * *"
+  workflow_dispatch:
 
 jobs:
   curl_and_output:
