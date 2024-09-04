@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        env:
-          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME}}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD}}
-          SMTP_FROM: ${{ secrets.SMTP_FROM}}
-          SMTP_TO: ${{ secrets.SMTP_TO}}
       - name: Install dependencies
         run: npm install  
       - name: Run Node.js application
+        env:
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+          SMTP_TO: ${{ secrets.SMTP_TO }}
         run: npm start
