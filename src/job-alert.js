@@ -19,7 +19,7 @@ module.exports = (function() {
     const mailOptions = {
         from: process.env.SMTP_FROM,
         to: process.env.SMTP_TO,
-        subject: 'New jobs found',
+        subject: jobs.length + ' new jobs found',
         html: fullBody
     };
     
